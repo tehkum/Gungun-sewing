@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: #1d1d1f; 
+    z-index: 2;
+    color: white;
+}
+
+.nav-inp{
+    width: 40vw !important;
+}
+
+footer{
+    background-color: #e1a140;
+}
+
+
+
