@@ -14,12 +14,22 @@ nav{
     color: white;
 }
 
+nav:hover{
+    background-color: black !important;
+}
+
 .nav-inp{
     width: 40vw !important;
 }
 
+#cart-count{
+    background-color: red;
+    border-radius: 5px;
+    color: white !important;
+}
+
 footer{
-    background-color: #e1a140;
+    background-color: #3AC63D;
 }
 
 
@@ -30,20 +40,25 @@ footer{
     } }
 
 .btn-cart{
-    background-color: #e1a140 !important;
+    background-color: #3AC63D !important;
     color: white !important;
 }
 
 .btn-cart:hover{
-    background-color: #ffaa00 !important;
+    background-color: #3AC63D !important;
 }
 
 .btn-outline-primary{
-    color: #e1a140 !important;
-    border: 1px solid #e1a140 !important;
+    color: #3AC63D !important;
+    border: 1px solid #3AC63D !important;
 }
 
 .btn-outline-primary:hover{
-    background-color: #e1a140 !important;
+    background-color: #3AC63D !important;
     color: white !important;
 }
+
+
+
+
+  

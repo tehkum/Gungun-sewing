@@ -5,60 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      form {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+label, input {
+  display: block;
+  margin: 10px 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: darkblue;
+}
+
+    </style>
   </head>
+  
   <body>
-    <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Phone Number</label>
-          <input type="number" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Retype Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
+    <form onsubmit="return validateForm()">
+      <div>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name">
+      </div>
+    
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+    
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    
+      <div>
+        <label for="address1">Address Lane 1:</label>
+        <input type="text" id="address1" name="address1">
+      </div>
+    
+      <div>
+        <label for="address2">Address Lane 2:</label>
+        <input type="text" id="address2" name="address2">
+      </div>
+    
+      <div>
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark" name="landmark">
+      </div>
+    
+      <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+      </div>
+    
+      <div>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+      </div>
+    
+      <div>
+        <label for="pincode">Pincode:</label>
+        <input type="number" id="pincode" name="pincode">
+      </div>
+    
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+    
+      <div>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password">
+      </div>
+    
+      <button type="submit">Sign Up</button>
+    </form>
+    <script>
+      function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+    
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+    
+        return true;
+      }
+    </script>
+    
+    
+    
+    
 
       <div class="row">
         <div class="col-md-3">
@@ -68,6 +129,7 @@
           </a>
         </div>
       </div>
+      <script src="signup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
